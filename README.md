@@ -110,4 +110,4 @@ cd client && npm run dev # Frontend: http://localhost:5173
 
 ## Author
 
-Vashu — AI FSD End Semester Examination
+Vashu 
