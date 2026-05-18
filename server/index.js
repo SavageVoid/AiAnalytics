@@ -26,9 +26,11 @@ app.use('/api/employees', employeeRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/auth', authRoutes);
 
-// ─── Health Check ─────────────────────────────────────────────────────────────
-app.get('/', (req, res) => {
- res.json({ message: 'AI Employee Analytics API is running ' });
+// ─── Serve React Frontend (Production) ────────────────────────────────────────
+app.use(express.static(path.join(__dirname, '../client/dist')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
 });
 
 // ─── Global Error Handler ─────────────────────────────────────────────────────
