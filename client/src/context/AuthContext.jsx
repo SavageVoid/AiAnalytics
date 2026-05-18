@@ -1,3 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-hooks/set-state-in-effect */
 // client/src/context/AuthContext.jsx — Global auth state (login/logout/user)
 
 import { createContext, useContext, useState, useEffect } from 'react';

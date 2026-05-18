@@ -22,3 +22,5 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+remove_emojis.js
+USER_GUIDE.md
