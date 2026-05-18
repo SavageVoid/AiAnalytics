@@ -29,7 +29,8 @@ app.use('/api/auth', authRoutes);
 // ─── Serve React Frontend (Production) ────────────────────────────────────────
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('*', (req, res) => {
+// Express 5 requires regex /(.*)/ instead of '*' for catch-all routes
+app.get(/(.*)/, (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'));
 });
 
