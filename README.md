@@ -22,6 +22,22 @@ A full-stack MERN application that analyzes employee performance data and provid
 | AI | OpenRouter API (OpenAI-compatible) |
 | Deploy | Render (Frontend + Backend) + MongoDB Atlas |
 
+## System Interface & Previews
+
+Below are visual previews of the **Savage Analytics** enterprise platform:
+
+| Authentication Screen | Dynamic Analytics Dashboard |
+|:---:|:---:|
+| ![Savage Analytics - Authentication](./assets/login.png) | ![Savage Analytics - Enterprise Dashboard](./assets/dashboard.png) |
+
+| Employees Directory | Add Employee Form |
+|:---:|:---:|
+| ![Savage Analytics - Employees Directory](./assets/employees.png) | ![Savage Analytics - Add Employee Form](./assets/add_employee.png) |
+
+| AI-Powered Recommendations |
+|:---:|
+| ![Savage Analytics - AI Performance Insights](./assets/ai_recommendations.png) |
+
 ## Project Structure
 
 ```
