@@ -1,7 +1,7 @@
-/* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react-hooks/set-state-in-effect */
-// client/src/context/AuthContext.jsx — Global auth state (login/logout/user)
+
+
+
+
 
 import { createContext, useContext, useState, useEffect } from 'react';
 import api from '../api/axios';
@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [user,    setUser]    = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // On app load: check if token exists and fetch current user
+  
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -42,5 +42,5 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// Custom hook for easy access
+
 export const useAuth = () => useContext(AuthContext);

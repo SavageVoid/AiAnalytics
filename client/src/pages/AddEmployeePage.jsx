@@ -1,4 +1,4 @@
-// client/src/pages/AddEmployeePage.jsx — Wrapper page for EmployeeForm
+
 
 import { useNavigate } from 'react-router-dom';
 import EmployeeForm from '../components/EmployeeForm';

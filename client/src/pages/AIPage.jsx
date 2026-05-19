@@ -1,4 +1,4 @@
-// client/src/pages/AIPage.jsx — Standalone AI Recommendation Page
+
 
 import AIRecommendation from '../components/AIRecommendation';
 

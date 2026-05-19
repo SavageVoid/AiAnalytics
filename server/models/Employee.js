@@ -1,4 +1,4 @@
-// server/models/Employee.js — Mongoose schema for Employee
+
 
 const mongoose = require('mongoose');
 
@@ -12,7 +12,7 @@ const employeeSchema = new mongoose.Schema(
     email: {
       type: String,
       required: [true, 'Email is required'],
-      unique: true,                 // No duplicate emails (Q3: duplicate email → error)
+      unique: true,                 
       lowercase: true,
       trim: true,
       match: [/^\S+@\S+\.\S+$/, 'Please enter a valid email address'],
@@ -23,12 +23,12 @@ const employeeSchema = new mongoose.Schema(
       trim: true,
     },
     skills: {
-      type: [String],              // Array of skill strings
+      type: [String],              
       default: [],
     },
     performanceScore: {
       type: Number,
-      required: [true, 'Performance score is required'],   // Q3: missing score → validation error
+      required: [true, 'Performance score is required'],   
       min: [0, 'Score cannot be less than 0'],
       max: [100, 'Score cannot exceed 100'],
     },
@@ -39,7 +39,7 @@ const employeeSchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true,              // Adds createdAt and updatedAt automatically
+    timestamps: true,              
   }
 );
 

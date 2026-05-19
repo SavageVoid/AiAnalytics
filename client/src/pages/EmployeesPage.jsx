@@ -1,4 +1,4 @@
-// client/src/pages/EmployeesPage.jsx — Q1: Employee List Page (Search + List)
+
 
 import { useState, useEffect, useCallback } from 'react';
 import EmployeeList   from '../components/EmployeeList';
@@ -10,9 +10,9 @@ const EmployeesPage = () => {
   const [employees,   setEmployees]   = useState([]);
   const [loading,     setLoading]     = useState(true);
   const [filters,     setFilters]     = useState({ name: '', department: '', minScore: '' });
-  const [aiTarget,    setAiTarget]    = useState(null);   // Employee to get AI insight for
+  const [aiTarget,    setAiTarget]    = useState(null);   
 
-  // Fetch employees — with filters applied
+  
   const fetchEmployees = useCallback(async () => {
     setLoading(true);
     try {
@@ -32,9 +32,9 @@ const EmployeesPage = () => {
     }
   }, [filters]);
 
-  // Re-fetch whenever filters change
+  
   useEffect(() => {
-    const timer = setTimeout(fetchEmployees, 400);  // Debounce 400ms
+    const timer = setTimeout(fetchEmployees, 400);  
     return () => clearTimeout(timer);
   }, [fetchEmployees]);
 
@@ -55,10 +55,10 @@ const EmployeesPage = () => {
         </p>
       </div>
 
-      {/* Search & Filter — Q1 requirement */}
+      {}
       <SearchFilter filters={filters} onChange={setFilters} onClear={clearFilters} />
 
-      {/* Employee List — Q1 requirement */}
+      {}
       <EmployeeList
         employees={employees}
         loading={loading}
@@ -67,7 +67,7 @@ const EmployeesPage = () => {
         onAI={setAiTarget}
       />
 
-      {/* AI Modal — opens when "AI Insight" clicked on a card */}
+      {}
       {aiTarget && (
         <AIRecommendation
           preloadEmployee={aiTarget}

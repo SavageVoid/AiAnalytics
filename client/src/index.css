@@ -1,32 +1,32 @@
-/* client/src/index.css — Premium Mint Green & Ocean Blue Global Design System */
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 
-/* ─── CSS Variables (Design Tokens) ─────────────────────────────────────────── */
+
+
+
 :root {
-  /* Colors - Deep Ocean & Vibrant Mint */
+  
   --bg-primary:      #030712;
   --bg-secondary:    #0b1528;
   --bg-card:         rgba(15, 29, 54, 0.65);
   --bg-card-hover:   rgba(25, 45, 80, 0.85);
   
-  /* Borders */
+  
   --border:          rgba(45, 212, 191, 0.12);
   --border-bright:   rgba(45, 212, 191, 0.35);
 
-  /* Accents */
+  
   --accent-ocean:    #0284c7;
   --accent-cyan:     #06b6d4;
   --accent-mint:     #34d399;
   --accent-red:      #f43f5e;
   --accent-amber:    #fbbf24;
 
-  /* Typography Colors */
+  
   --text-primary:    #f8fafc;
   --text-secondary:  #94a3b8;
   --text-muted:      #64748b;
 
-  /* Gradients */
+  
   --gradient-ocean:  linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
   --gradient-mint:   linear-gradient(135deg, #34d399 0%, #059669 100%);
   --gradient-accent: linear-gradient(90deg, #0284c7 0%, #2dd4bf 50%, #34d399 100%);
@@ -34,12 +34,12 @@
   --gradient-mesh:   radial-gradient(at 0% 0%, rgba(2, 132, 199, 0.15) 0px, transparent 50%),
                      radial-gradient(at 100% 100%, rgba(52, 211, 153, 0.15) 0px, transparent 50%);
 
-  /* Shadows & Glows */
+  
   --shadow-card:     0 8px 32px rgba(0, 0, 0, 0.5);
   --shadow-glow:     0 0 20px rgba(45, 212, 191, 0.25);
   --shadow-hover:    0 12px 40px rgba(0, 0, 0, 0.7);
 
-  /* Radius & Transitions */
+  
   --radius-sm:       8px;
   --radius-md:       14px;
   --radius-lg:       20px;
@@ -48,7 +48,7 @@
   --transition:      all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ─── Reset & Base ───────────────────────────────────────────────────────────── */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -66,7 +66,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ─── Custom Scrollbar ────────────────────────────────────────────────────────── */
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -83,14 +83,14 @@ body {
   background: var(--accent-mint);
 }
 
-/* ─── Layout ─────────────────────────────────────────────────────────────────── */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ─── Navbar (Premium Glassmorphic Floating Panel) ────────────────────────────── */
+
 .navbar {
   background: rgba(3, 7, 18, 0.6);
   backdrop-filter: blur(20px);
@@ -172,7 +172,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* ─── Modern Buttons ──────────────────────────────────────────────────────────── */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -236,7 +236,7 @@ body {
 .btn-lg { padding: 14px 32px; font-size: 1.05rem; border-radius: var(--radius-lg); }
 .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
 
-/* ─── Premium Glassmorphic Cards ────────────────────────────────────────────── */
+
 .card {
   background: var(--bg-card);
   backdrop-filter: blur(12px);
@@ -254,7 +254,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ─── Form Inputs (Sleek Bottom Line & Glassmorphic Fill) ───────────────────── */
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -290,7 +290,7 @@ body {
 .form-input::placeholder { color: var(--text-muted); }
 .form-select option { background: var(--bg-secondary); }
 
-/* Range Sliders */
+
 .slider-container {
   display: flex;
   flex-direction: column;
@@ -312,6 +312,7 @@ body {
 }
 .form-slider {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 6px;
   border-radius: 99px;
@@ -334,7 +335,7 @@ body {
   transform: scale(1.2);
 }
 
-/* ─── Page Headers & Typography ─────────────────────────────────────────────── */
+
 .page-header {
   padding: 48px 0 28px;
 }
@@ -350,7 +351,7 @@ body {
 }
 .page-subtitle { color: var(--text-secondary); font-size: 1rem; }
 
-/* ─── Glassmorphic Badges ────────────────────────────────────────────────────── */
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -365,7 +366,7 @@ body {
 .badge-amber  { background: rgba(251, 191, 36, 0.12); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.25); }
 .badge-red    { background: rgba(244, 63, 94, 0.12);  color: #f43f5e; border: 1px solid rgba(244, 63, 94, 0.25); }
 
-/* ─── SVG Progress Dials & Visual Metrics ───────────────────────────────────── */
+
 .circular-progress {
   position: relative;
   width: 90px;
@@ -382,7 +383,7 @@ body {
 }
 .circular-progress circle {
   fill: none;
-  stroke-width: 7;
+  stroke-width: 7px;
   stroke-linecap: round;
 }
 .circular-progress .bg-circle {
@@ -398,7 +399,7 @@ body {
   color: var(--text-primary);
 }
 
-/* ─── Search & Filters (Clean Glass Deck) ────────────────────────────────────── */
+
 .search-filter-deck {
   background: rgba(11, 21, 40, 0.5);
   backdrop-filter: blur(10px);
@@ -414,7 +415,7 @@ body {
   .search-filter-deck { grid-template-columns: 1fr; }
 }
 
-/* View Switcher */
+
 .view-switcher {
   display: flex;
   background: rgba(15, 29, 54, 0.8);
@@ -440,7 +441,7 @@ body {
   color: #030712;
 }
 
-/* ─── Initials Avatar ────────────────────────────────────────────────────────── */
+
 .avatar-circle {
   width: 50px;
   height: 50px;
@@ -456,7 +457,7 @@ body {
   box-shadow: 0 4px 12px rgba(52, 211, 153, 0.15);
 }
 
-/* ─── Loading Skeletons ───────────────────────────────────────────────────────── */
+
 .skeleton-container {
   display: flex;
   flex-direction: column;
@@ -476,7 +477,7 @@ body {
   100% { background-position: -200% 0; }
 }
 
-/* ─── Alerts & Toasts ────────────────────────────────────────────────────────── */
+
 .alert {
   padding: 14px 20px;
   border-radius: var(--radius-md);
@@ -491,12 +492,12 @@ body {
 .alert-success { background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.25); color: var(--accent-mint); }
 .alert-info    { background: rgba(2,132,199,0.08); border: 1px solid rgba(2,132,199,0.25); color: #38bdf8; }
 
-/* ─── Grid Systems ───────────────────────────────────────────────────────────── */
+
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 
-/* Asymmetrical Layout ratios */
+
 .grid-asym-2 {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -508,7 +509,7 @@ body {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
 }
 
-/* ─── Stats Card ─────────────────────────────────────────────────────────────── */
+
 .stat-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -535,7 +536,7 @@ body {
 .stat-value { font-size: 2rem; font-weight: 900; color: var(--text-primary); letter-spacing: -0.02em; }
 .stat-label { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
 
-/* ─── Custom Modal Popup (Glassmorphic) ──────────────────────────────────────── */
+
 .modal-overlay {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -562,7 +563,7 @@ body {
   to { transform: scale(1) translateY(0); opacity: 1; }
 }
 
-/* ─── List Layout Mode ───────────────────────────────────────────────────────── */
+
 .list-layout-container {
   display: flex;
   flex-direction: column;

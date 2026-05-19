@@ -1,4 +1,4 @@
-// client/src/components/EmployeeForm.jsx — High-fidelity Employee Form with Sliders
+
 
 import { useState } from 'react';
 import api from '../api/axios';
@@ -17,12 +17,12 @@ const EmployeeForm = ({ onSuccess }) => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ text: '', type: '' });
 
-  // Handle standard changes
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle slider changes explicitly
+  
   const handleSliderChange = (name, val) => {
     setFormData({ ...formData, [name]: Number(val) });
   };
@@ -83,7 +83,7 @@ const EmployeeForm = ({ onSuccess }) => {
 
       <form onSubmit={handleSubmit}>
         <div className="grid-2">
-          {/* Employee Name */}
+          {}
           <div className="form-group">
             <label className="form-label" htmlFor="name">Full Name</label>
             <input
@@ -93,7 +93,7 @@ const EmployeeForm = ({ onSuccess }) => {
             />
           </div>
 
-          {/* Email */}
+          {}
           <div className="form-group">
             <label className="form-label" htmlFor="email">Email Address</label>
             <input
@@ -103,7 +103,7 @@ const EmployeeForm = ({ onSuccess }) => {
             />
           </div>
 
-          {/* Department */}
+          {}
           <div className="form-group">
             <label className="form-label" htmlFor="department">Department</label>
             <select
@@ -118,7 +118,7 @@ const EmployeeForm = ({ onSuccess }) => {
             </select>
           </div>
 
-          {/* Skills */}
+          {}
           <div className="form-group">
             <label className="form-label" htmlFor="skills">Core Skills (comma separated)</label>
             <input
@@ -128,7 +128,7 @@ const EmployeeForm = ({ onSuccess }) => {
             />
           </div>
 
-          {/* Performance Score range slider */}
+          {}
           <div className="form-group slider-container">
             <div className="slider-header">
               <label className="form-label" htmlFor="performanceScore">Performance Score</label>
@@ -142,7 +142,7 @@ const EmployeeForm = ({ onSuccess }) => {
             />
           </div>
 
-          {/* Experience range slider */}
+          {}
           <div className="form-group slider-container">
             <div className="slider-header">
               <label className="form-label" htmlFor="experience">Years of Experience</label>

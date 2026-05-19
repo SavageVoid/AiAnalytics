@@ -1,4 +1,4 @@
-// client/src/components/EmployeeList.jsx — High-fidelity Directory with View Switcher & Sliders
+
 
 import { useState } from 'react';
 import api from '../api/axios';
@@ -21,7 +21,7 @@ const getInitials = (name) => {
     : 'EE';
 };
 
-// ─── Individual Employee Card (Grid View) ──────────────────────────────────────
+
 const EmployeeCard = ({ employee, onDelete, onEdit, onAI }) => {
   const [deleting, setDeleting] = useState(false);
 
@@ -41,7 +41,7 @@ const EmployeeCard = ({ employee, onDelete, onEdit, onAI }) => {
 
   return (
     <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-      {/* Top Section */}
+      {}
       <div style={{ display: 'flex', gap: '14px', alignItems: 'center' }}>
         <div className="avatar-circle">
           {getInitials(employee.name)}
@@ -56,7 +56,7 @@ const EmployeeCard = ({ employee, onDelete, onEdit, onAI }) => {
         </div>
       </div>
 
-      {/* Meta Badges */}
+      {}
       <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
         <span className="badge badge-blue">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '4px' }}>
@@ -74,7 +74,7 @@ const EmployeeCard = ({ employee, onDelete, onEdit, onAI }) => {
         </span>
       </div>
 
-      {/* Performance Metrics */}
+      {}
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '8px' }}>
           <span>Performance Score</span>
@@ -90,7 +90,7 @@ const EmployeeCard = ({ employee, onDelete, onEdit, onAI }) => {
         </div>
       </div>
 
-      {/* Skills Array */}
+      {}
       {employee.skills?.length > 0 && (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '4px' }}>
           {employee.skills.map((skill, i) => (
@@ -99,7 +99,7 @@ const EmployeeCard = ({ employee, onDelete, onEdit, onAI }) => {
         </div>
       )}
 
-      {/* Action triggers */}
+      {}
       <div style={{ display: 'flex', gap: '8px', marginTop: 'auto', paddingTop: '8px', borderTop: '1px solid var(--border)' }}>
         <button className="btn btn-success btn-sm" onClick={() => onAI(employee)} style={{ flex: 1 }}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -124,7 +124,7 @@ const EmployeeCard = ({ employee, onDelete, onEdit, onAI }) => {
   );
 };
 
-// ─── Individual Employee Row (List View) ──────────────────────────────────────
+
 const EmployeeRow = ({ employee, onDelete, onEdit, onAI }) => {
   const [deleting, setDeleting] = useState(false);
 
@@ -203,7 +203,7 @@ const EmployeeRow = ({ employee, onDelete, onEdit, onAI }) => {
   );
 };
 
-// ─── Edit Modal (Now Featuring Sliders with Live Values) ──────────────────────
+
 const EditModal = ({ employee, onClose, onUpdated }) => {
   const [form, setForm] = useState({
     performanceScore: employee.performanceScore,
@@ -238,7 +238,7 @@ const EditModal = ({ employee, onClose, onUpdated }) => {
           Update Profile — {employee.name}
         </h3>
 
-        {/* Department field */}
+        {}
         <div className="form-group">
           <label className="form-label">Department</label>
           <input className="form-input" type="text"
@@ -246,7 +246,7 @@ const EditModal = ({ employee, onClose, onUpdated }) => {
             onChange={(e) => setForm({ ...form, department: e.target.value })} />
         </div>
 
-        {/* Performance Score range slider */}
+        {}
         <div className="form-group slider-container">
           <div className="slider-header">
             <label className="form-label">Performance Rating</label>
@@ -257,7 +257,7 @@ const EditModal = ({ employee, onClose, onUpdated }) => {
             onChange={(e) => setForm({ ...form, performanceScore: e.target.value })} />
         </div>
 
-        {/* Experience range slider */}
+        {}
         <div className="form-group slider-container">
           <div className="slider-header">
             <label className="form-label">Years of Experience</label>
@@ -268,7 +268,7 @@ const EditModal = ({ employee, onClose, onUpdated }) => {
             onChange={(e) => setForm({ ...form, experience: e.target.value })} />
         </div>
 
-        {/* Skills Tag input */}
+        {}
         <div className="form-group">
           <label className="form-label">Core Skills (comma separated)</label>
           <input className="form-input" type="text"
@@ -288,10 +288,10 @@ const EditModal = ({ employee, onClose, onUpdated }) => {
   );
 };
 
-// ─── Main Export Component with List/Grid Toggle ───────────────────────────────
+
 const EmployeeList = ({ employees, loading, onDelete, onRefresh, onAI }) => {
   const [editTarget, setEditTarget] = useState(null);
-  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
+  const [viewMode, setViewMode] = useState('grid'); 
 
   if (loading) {
     return (
@@ -320,10 +320,10 @@ const EmployeeList = ({ employees, loading, onDelete, onRefresh, onAI }) => {
 
   return (
     <>
-      {/* View Switcher Deck */}
+      {}
       <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '20px' }}>
         <div className="view-switcher">
-          {/* Grid Button */}
+          {}
           <button className={`view-btn ${viewMode === 'grid' ? 'active' : ''}`} onClick={() => setViewMode('grid')}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <rect x="3" y="3" width="7" height="7" />
@@ -332,7 +332,7 @@ const EmployeeList = ({ employees, loading, onDelete, onRefresh, onAI }) => {
               <rect x="3" y="14" width="7" height="7" />
             </svg>
           </button>
-          {/* List Button */}
+          {}
           <button className={`view-btn ${viewMode === 'list' ? 'active' : ''}`} onClick={() => setViewMode('list')}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <line x1="8" y1="6" x2="21" y2="6" />
@@ -346,7 +346,7 @@ const EmployeeList = ({ employees, loading, onDelete, onRefresh, onAI }) => {
         </div>
       </div>
 
-      {/* Grid or List dynamic layout */}
+      {}
       {viewMode === 'grid' ? (
         <div className="grid-3">
           {employees.map((emp) => (

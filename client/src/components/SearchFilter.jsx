@@ -1,4 +1,4 @@
-// client/src/components/SearchFilter.jsx — High-fidelity Search & Filter Deck
+
 
 const DEPARTMENTS = ['', 'Development', 'Design', 'Marketing', 'HR', 'Finance', 'Operations', 'Sales'];
 
@@ -31,7 +31,7 @@ const SearchFilter = ({ filters, onChange, onClear }) => {
       </div>
 
       <div className="grid-3" style={{ alignItems: 'flex-end' }}>
-        {/* Name search */}
+        {}
         <div className="form-group" style={{ marginBottom: 0 }}>
           <label className="form-label" htmlFor="search-name">Employee Name</label>
           <div style={{ position: 'relative' }}>
@@ -48,7 +48,7 @@ const SearchFilter = ({ filters, onChange, onClear }) => {
           </div>
         </div>
 
-        {/* Department filter */}
+        {}
         <div className="form-group" style={{ marginBottom: 0 }}>
           <label className="form-label" htmlFor="search-department">Department</label>
           <select
@@ -62,7 +62,7 @@ const SearchFilter = ({ filters, onChange, onClear }) => {
           </select>
         </div>
 
-        {/* Min performance score range slider */}
+        {}
         <div className="form-group slider-container" style={{ marginBottom: 0 }}>
           <div className="slider-header">
             <label className="form-label" htmlFor="search-min-score">Minimum Score</label>

@@ -1,22 +1,22 @@
-// server/controllers/aiController.js — AI Recommendation logic (Q5)
+
 
 const axios = require('axios');
 const Employee = require('../models/Employee');
 
-/**
- * POST /api/ai/recommend
- * Accepts employee data (or employee ID) and returns AI-generated:
- * - Promotion recommendation
- * - Training suggestions
- * - Performance feedback
- */
+
+
+
+
+
+
+
 const getRecommendation = async (req, res) => {
  try {
  const { employeeId, employeeData } = req.body;
 
  let employee;
 
- // If employeeId provided, fetch from DB; otherwise use inline data
+ 
  if (employeeId) {
  employee = await Employee.findById(employeeId);
  if (!employee) return res.status(404).json({ message: 'Employee not found' });
@@ -26,7 +26,7 @@ const getRecommendation = async (req, res) => {
  return res.status(400).json({ message: 'Provide either employeeId or employeeData' });
  }
 
- // ─── Build AI Prompt ────────────────────────────────────────────────────────
+ 
  const prompt = `
 You are an expert HR analytics AI. Analyze the following employee profile and provide:
 1. **Promotion Recommendation**: Should this employee be promoted? Give clear reasoning.
@@ -44,11 +44,11 @@ Employee Profile:
 Provide a structured, professional response with clear headings.
  `.trim();
 
- // ─── Call OpenRouter API (OpenAI-compatible) ─────────────────────────────────
+ 
  const response = await axios.post(
  'https://openrouter.ai/api/v1/chat/completions',
  {
- model: 'deepseek/deepseek-v4-flash:free', // Free model on OpenRouter
+ model: 'deepseek/deepseek-v4-flash:free', 
  messages: [
  { role: 'system', content: 'You are a professional HR analytics assistant.' },
  { role: 'user', content: prompt },
@@ -81,20 +81,20 @@ Provide a structured, professional response with clear headings.
  }
 };
 
-/**
- * POST /api/ai/rank
- * Ranks multiple employees by performance score + AI analysis
- */
+
+
+
+
 const rankEmployees = async (req, res) => {
  try {
- // Get all employees sorted by performance score (descending)
+ 
  const employees = await Employee.find().sort({ performanceScore: -1 });
 
  if (employees.length === 0) {
  return res.status(404).json({ message: 'No employees found' });
  }
 
- // Build ranking with simple scoring logic
+ 
  const ranked = employees.map((emp, index) => ({
  rank: index + 1,
  name: emp.name,

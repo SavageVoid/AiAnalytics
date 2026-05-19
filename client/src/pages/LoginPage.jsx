@@ -1,4 +1,4 @@
-// client/src/pages/LoginPage.jsx — Premium Glassmorphic Authentication Page
+
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import api from '../api/axios';
 
 const LoginPage = () => {
-  const [mode, setMode] = useState('login'); // 'login' | 'register'
+  const [mode, setMode] = useState('login'); 
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -45,7 +45,7 @@ const LoginPage = () => {
       padding: '24px',
     }}>
       <div style={{ width: '100%', maxWidth: '420px' }}>
-        {/* Brand Logo & Header */}
+        {}
         <div style={{ textAlign: 'center', marginBottom: '32px' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
             <svg width="46" height="46" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,9 +77,9 @@ const LoginPage = () => {
           </p>
         </div>
 
-        {/* Auth Glass Card */}
+        {}
         <div className="card" style={{ border: '1px solid var(--border-bright)' }}>
-          {/* Tab toggler */}
+          {}
           <div style={{
             display: 'flex',
             background: 'rgba(15, 29, 54, 0.8)',

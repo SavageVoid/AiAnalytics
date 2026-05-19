@@ -1,4 +1,4 @@
-// client/src/pages/DashboardPage.jsx — High-fidelity Dashboard with Visual Metrics
+
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -74,7 +74,7 @@ const DashboardPage = () => {
     fetchData();
   }, []);
 
-  // Generate initials for employee avatar
+  
   const getInitials = (name) => {
     return name
       ? name.split(' ').map((n) => n[0]).slice(0, 2).join('').toUpperCase()
@@ -92,7 +92,7 @@ const DashboardPage = () => {
 
   return (
     <div className="container" style={{ paddingTop: '40px', paddingBottom: '60px' }}>
-      {/* Header */}
+      {}
       <div className="page-header" style={{ marginBottom: '32px' }}>
         <h1 className="page-title">Welcome Back, {user?.name}</h1>
         <p className="page-subtitle">Here's your employee analytics overview</p>

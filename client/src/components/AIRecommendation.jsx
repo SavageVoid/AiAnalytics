@@ -1,4 +1,4 @@
-// client/src/components/AIRecommendation.jsx — Premium AI Insights Modal with Pulsing Skeleton Loaders
+
 
 import { useState } from 'react';
 import api from '../api/axios';
@@ -56,7 +56,7 @@ const AIRecommendation = ({ preloadEmployee, onClose }) => {
   return (
     <div className={preloadEmployee ? "modal-overlay" : ""}>
       <div className="modal-content" style={{ maxWidth: '680px', background: 'var(--bg-secondary)', border: '1px solid var(--border-bright)' }}>
-        {/* Header */}
+        {}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px' }}>
           <div>
             <h2 style={{ fontWeight: 800, fontSize: '1.4rem', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -80,7 +80,7 @@ const AIRecommendation = ({ preloadEmployee, onClose }) => {
           )}
         </div>
 
-        {/* Dynamic Sliders Form */}
+        {}
         <div className="grid-2" style={{ marginBottom: '20px' }}>
           <div className="form-group">
             <label className="form-label" htmlFor="ai-name">Employee Name</label>
@@ -142,7 +142,7 @@ const AIRecommendation = ({ preloadEmployee, onClose }) => {
           )}
         </button>
 
-        {/* Error notification */}
+        {}
         {error && (
           <div className="alert alert-error" style={{ marginTop: '20px' }}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -154,7 +154,7 @@ const AIRecommendation = ({ preloadEmployee, onClose }) => {
           </div>
         )}
 
-        {/* Skeleton loading preview */}
+        {}
         {loading && (
           <div className="skeleton-container" style={{ marginTop: '24px', padding: '24px', background: 'rgba(255, 255, 255, 0.01)', border: '1px dashed var(--border)', borderRadius: 'var(--radius-md)' }}>
             <div className="skeleton-line header" style={{ marginBottom: '14px' }} />
@@ -164,7 +164,7 @@ const AIRecommendation = ({ preloadEmployee, onClose }) => {
           </div>
         )}
 
-        {/* AI Response Text Box */}
+        {}
         {recommendation && (
           <div style={{ marginTop: '24px' }}>
             <h3 style={{ fontWeight: 800, fontSize: '1.05rem', marginBottom: '12px', color: 'var(--accent-mint)', display: 'flex', alignItems: 'center', gap: '8px' }}>

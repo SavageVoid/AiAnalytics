@@ -21,9 +21,9 @@ async function testAll() {
         },
         { headers: { 'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}` } }
       );
-      console.log(`✅ SUCCESS: ${model} works!`);
+      console.log(`SUCCESS: ${model} works!`);
     } catch (err) {
-      console.error(`❌ FAIL: ${model} - ${err.response ? err.response.data.error.message : err.message}`);
+      console.error(`FAIL: ${model} - ${err.response ? err.response.data.error.message : err.message}`);
     }
   }
 }
